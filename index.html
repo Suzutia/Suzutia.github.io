@@ -6,6 +6,9 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Thabto</title>
+		<script type="text/javascript" src="enchant.js"></script>
+        <script type="text/javascript" src="ui.enchant.js"></script>
+        <script type="text/javascript" src="game.js"></script>
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/base.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/1.0.6/flexibility.js"></script>
@@ -14,7 +17,7 @@
 		setTimeout("location.reload()",1000*60);
 		//-->
 		</SCRIPT>
-		
+		 
 	</head>
 	
 <body>
@@ -61,6 +64,8 @@
 		
 		
 	</ul>
+
+	<a href="">ツール</a>
 </menubar>
 
 <main>
@@ -96,6 +101,41 @@
   </div>
  
 </main>
+
+<script type="text/javascript">
+	var nameBox="";
+	var box="";
+	
+	function dispTextarea(){
+		var tarea = document.fm.msg.value
+		alert(tarea);
+	}
+
+	function dispName(){
+		var tarea = document.fm.msg.value.replace(/\r\n/g,"\n");
+		var lines = tarea.split('\n');
+		for (var i=0; i < lines.length; i++ ){
+			//空行は無視する
+			if( lines[i] == ''){
+				continue;
+			}
+			nameBox = lines[i].replace(/がロビーに参加しました/g,"");
+			nameBox = nameBox.replace(/が入室しました。/g,"");
+			box += nameBox + "%2C";
+		}
+		window.open('https://jp.op.gg/multi/query='+box,'_blank');
+	}
+
+</script>
+
+<form name="fm" method="POST" action="">
+<div>
+	<textarea name="msg" cols=100 rows=10></textarea>
+</div>
+<input type="submit" name="Search" value="Search" onclick="dispName()">
+</form>
+
+
 <aside>
   <p>Copyright Web制作チーム:Thabto all rights reserved</p>
 </aside>
