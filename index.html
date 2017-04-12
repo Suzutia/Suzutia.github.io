@@ -1,24 +1,108 @@
 <!DOCTYPE html>
-
-<head>
-
-<title>Thabto</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<h1>Thabto</h1>
-<!-- ナビゲーションバー -->
-<div id="menubar">
- <ul>
- <li><a href="ｈttp" title="ホーム" >ホーム</a></li>
- <li><a href="http" title="サイト概要">サイト概要</a></li>
- <li><a href="http" title="検索">検索</a></li>
- <li><a href="http" title="ログイン">ログイン</a></li>
- <li><a href="http" title="登録">登録</a></li>
- </ul>
-</div>
-
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+  		<meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Thabto</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/base.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/1.0.6/flexibility.js"></script>
+		<SCRIPT LANGUAGE="JavaScript">
+		<!--
+		setTimeout("location.reload()",1000*60);
+		//-->
+		</SCRIPT>
 		
+	</head>
+	
+<body>
+<header>
+  	<img src="images/logo.gif" alt="" id="top">
+	
+  	<form action="#" name="search2" method="post" id="search">
+  	<ul>
+  	<li><a href="">ログイン</a></li>
+  	
+	<li><a href="join/form.php">新規登録</a></li>
+	<li><SCRIPT LANGUAGE="javascript" TYPE="text/javascript">
+	<!--
+	var Nowymdhms　=　new Date();
+	var NowHour = Nowymdhms.getHours();
+	var NowMin = Nowymdhms.getMinutes();
+	var NowSec = Nowymdhms.getSeconds();
+	if(NowHour < 10){
+		NowHour = "0"+NowHour;
+	}
+	if(NowMin < 10){
+		NowMin = "0"+NowMin;
+	}
+	document.write(NowHour+":"+NowMin+":"+NowSec)
+	// -->
+	</SCRIPT></li>
+ 	</ul>
+		<dl class="search2">
+			<dt><input type="text" name="search" value="" placeholder="検索するテキストを入力..." /></dt>
+			<dd><button><span><img src="images/search.png"></span></button></dd>
+		</dl>
+		
+	</form>
+</header>
 
+<menubar>
+	<ul id="menu">
+		<li><a href="">ホーム</a></li>
+		<li><a href="">サイト詳細</a></li>
+		<li><a href="">イラスト</a></li>
+		<li><a href="">動画</a></li>
+		<li><a href="">音声</a></li>
+		<li><a href="">スレ</a></li>
+		
+		
+	</ul>
+</menubar>
+
+<main>
+  <div class="suzu">
+    <h1>すずしろ</h1>
+    <img src="images/01.png" alt="" class ="suzu">
+    <p>道草屋のすずしろ。調子に乗りやすい。</p>
+  </div>
+  <div class="suzu">
+    <h1>せり</h1>
+    <img src="images/02.png" alt="" class="suzu">
+    <p>頭たたいてる人。酒飲み。</p>
+  </div>
+  <div class="suzu">
+    <h1>すずしろ</h1>
+    <img src="images/03.png" alt="" class="suzu">
+    <p>酔ってるすずしろ。</p>
+  </div>
+  <div class="suzu">
+    <h1>すずしろ</h1>
+    <img src="images/99.png" alt="" class ="suzu">
+    <p>道草屋のすずしろ。調子に乗りやすい。</p>
+  </div>
+  <div class="suzu">
+    <h1>すず</h1>
+    <img src="images/100.png" alt="" class="suzu">
+    <p>頭たたいてる人。酒飲み。</p>
+  </div>
+  <div class="suzu">
+    <h1>すずしろ</h1>
+    <img src="images/101.png" alt="" class="suzu">
+    <p>酔ってるすずしろ。</p>
+  </div>
+ 
+</main>
+<aside>
+  <p>Copyright Web制作チーム:Thabto all rights reserved</p>
+</aside>
 </body>
+
+
+
+
+
 </html>

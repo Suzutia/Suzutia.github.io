@@ -1,32 +1,150 @@
 
 @charset "utf-8";
 
-<!-- メニューバー -->
-#manubar{
- width:100%; }
+header {
+  display: flex;
+    justify-content: space-between;
+	padding: 10px;
+}
 
-#menubar ul{
- display:table;
- width:100%;
- margin: 0; 
- padding: 0;
- background-color: #FFFFFF; }
+#search{
+	width:250px;
+}
+ 
+ul {
+  display: flex;
+	align-items: center;  /* 上下中央揃え */
+}
 
-#menubar li{
- display: table-cell;
- width:20%;
- padding:0;
- background-color: #000000; }
+ul li {
+	margin-left: 5px;
+	margin-right: 5px;
+}
 
-#menubar li a{
- display: block;
- margin:0 auto;
- padding:5px;
- border: 1px solid #FFFFFF;
- text-decoration: none;
- color: #FFFFFF;
- text-align: center;
- font-size: 18px; }
+dl.search2{
+	position:relative;
+	background-color:#fff;
+	border:1px solid #aaa;
+	border-radius:6px;
+}
+dl.search2 dt{
+	padding:3px;
+}
+dl.search2 dt input{
+	width:86%;
+	height:30px;
+	line-height:30px;
+	background:none;
+	border:none;
+}
+dl.search2 dd{
+	position:absolute;
+	top:0;
+	right:0;
+}
+dl.search2 dd button{
+	display:block;
+	padding:6px;
+	background:none;
+	border:none;
+}
+dl.search2 dd button span{
+	display:block;
+	width:30px;
+	height:30px;
+	background:url('../images/search_ic.png') no-repeat scroll 0 0;
+}
 
-#menubar li a:hover{
- background-color: #333333; }
+
+#menu{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	white-space:nowrap;
+}
+
+#menu ul{
+	width: 100%;
+}
+
+#menu li{
+	width: 30%;
+	float:left;
+	padding:0;
+	margin: 0;
+	text-align: center;
+}
+
+#menu li a{
+	width: auto;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: #666;
+	background-image: -moz-linear-gradient(top, #888 0%, #777 50%, #666 50%, #777 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #888), color-stop(0.50, #777), color-stop(0.50, #666), color-stop(1, #777));
+	border-left:1px solid #444;
+  	box-shadow: 1px 0px 0px rgba(225,225,225,0.3) inset,
+				-1px 0px 0px rgba(225,225,225,0.3) inset,
+				0px 1px 1px rgba(0,0,0,0.1) inset,
+				0px -1px 1px rgba(0,0,0,0.3) inset,
+				0px 1px 3px #666;
+}
+
+#menu li a:hover{
+	background: #555;
+	background-image: -moz-linear-gradient(top, #555 0%, #444 50%, #333 50%, #444 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #555), color-stop(0.50, #444), color-stop(0.50, #333), color-stop(1, #444));
+	box-shadow: 1px 0px 0px rgba(225,225,225,0) inset,
+             -1px 0px 0px rgba(225,225,225,0) inset,
+              0px 1px 1px rgba(0,0,0,0.1) inset,
+              0px -1px 1px rgba(0,0,0,0.3) inset,
+              0px 1px 3px #666;
+
+}
+
+#menu li:first-child a{
+	border-radius:5px 0 0 5px;
+	border-left:0;
+  	box-shadow:-1px 0px 0px rgba(225,225,225,0.3) inset,
+              0px 1px 1px rgba(0,0,0,0.1) inset,
+              0px -1px 1px rgba(0,0,0,0.3) inset,
+	  		  0px 1px 3px #666;
+}
+
+#menu li:last-child a{
+  	border-radius:0 5px 5px 0;
+  	box-shadow: 1px 0px 0px rgba(225,225,225,0.3) inset,
+	  			0px 1px 1px rgba(0,0,0,0.1) inset,
+              	0px -1px 1px rgba(0,0,0,0.3) inset,
+              	0px 1px 3px #666;
+}
+
+
+
+main {
+	display: flex;
+	flex-wrap:wrap;
+	padding: 10px;
+}
+
+main div.suzu {
+  width: calc(33.3% - 10px);
+  margin: 5px;
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main div.suzu {
+    width: calc(50% - 10px);
+    margin: 5px;
+  }
+}
